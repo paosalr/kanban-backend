@@ -1,0 +1,11 @@
+{
+    "build": {
+        "builder": "NIXPACKS",
+        "nixpacksPlan": {
+            "providers": ["php", "composer"]
+        }
+    },
+    "deploy": {
+        "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
+    }
+}

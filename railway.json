@@ -6,9 +6,13 @@
             "providers": ["php"],
             "phases": {
                 "setup": {
-                    "nixPkgsRepo": "nixpkgs/nixpkgs",
-                    "nixPkgsRev": "release-23.11",
                     "nixpkgs": ["php82", "php82Extensions.pdo_mysql", "composer"]
+                },
+                "build": {
+                    "cmds": [
+                        "composer install --no-dev --optimize-autoloader",
+                        "php artisan migrate --force"
+                    ]
                 }
             }
         }

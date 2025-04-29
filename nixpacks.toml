@@ -1,6 +1,5 @@
 [phases.setup]
-nixpkgs = ["php", "composer", "sqlite"] # o lo que uses
-# No Node.js aquí
+nixpkgs = ["php82", "composer", "sqlite"]
 
 [phases.build]
 cmds = [

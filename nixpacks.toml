@@ -4,7 +4,7 @@ nixPackages = ["php", "phpPackages.composer"]
 [phases.install]
 cmds = ["composer install"]
 
-[build]
+[phases.build]
 nixPackages = ["php" "phpPackages.composer" "nodejs"]
 
 

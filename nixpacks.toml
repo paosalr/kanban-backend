@@ -1,8 +1,9 @@
 [phases.setup]
-nixPkgs = ["php83", "composer"]
+nixPackages = ["php", "composer"]
+
+[phases.install]
+cmds = ["composer install"]
 
 [phases.build]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = ["php artisan migrate"] # Si usas Laravel, por ejemplo
 
-[phases.start]
-cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"

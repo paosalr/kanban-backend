@@ -8,12 +8,9 @@
                 "setup": {
                     "nixPkgsRepo": "nixpkgs/nixpkgs",
                     "nixPkgsRev": "release-23.11",
-                    "nixpkgs": ["php82", "php82Extensions.pdo_mysql", "composer", "sqlite"]
+                    "nixpkgs": ["php82", "php82Extensions.pdo_mysql", "composer"]
                 }
             }
         }
-    },
-    "deploy": {
-        "startCommand": "php artisan serve --host=0.0.0.0 --port=${PORT}"
     }
 }

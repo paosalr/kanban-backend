@@ -1,6 +1,13 @@
+[phases.setup]
+nixpkgs = ["php82", "php82Extensions.pdo_mysql", "composer"]
+
 [phases.build]
 cmds = [
   "composer install --optimize-autoloader --no-dev",
+  "php artisan optimize",
+  "php artisan config:cache",
+  "php artisan route:cache",
+  "php artisan view:cache",
   "php artisan migrate --force"
 ]
 

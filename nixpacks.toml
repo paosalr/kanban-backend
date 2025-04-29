@@ -5,5 +5,5 @@ nixPackages = ["php", "composer"]
 cmds = ["composer install"]
 
 [phases.build]
-cmds = ["php artisan migrate"] # Si usas Laravel, por ejemplo
+cmds = ["php artisan migrate"]
 

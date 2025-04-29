@@ -4,8 +4,7 @@
         "builder": "NIXPACKS",
         "nixpacksPlan": {
             "providers": [
-                "php",
-                "composer"
+                "php"
             ]
         }
     },

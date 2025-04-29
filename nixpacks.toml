@@ -1,5 +1,5 @@
 [phases.setup]
-nixPackages = ["php", "composer"]
+nixPackages = ["php", "phpPackages.composer"]
 
 [phases.install]
 cmds = ["composer install"]

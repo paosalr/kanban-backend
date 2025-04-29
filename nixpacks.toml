@@ -1,6 +1,3 @@
-[phases.setup]
-nixpkgs = ["php82", "composer", "sqlite"]
-
 [phases.build]
 cmds = [
   "composer install --optimize-autoloader --no-dev",

@@ -1,12 +1,14 @@
 {
-    "$schema": "https://railway.com/railway.schema.json",
+    "$schema": "https://railway.app/railway.schema.json",
     "build": {
         "builder": "NIXPACKS",
         "nixpacksPlan": {
             "providers": ["php"],
             "phases": {
                 "setup": {
-                    "nixpkgs": ["php82", "composer", "sqlite"]
+                    "nixPkgsRepo": "nixpkgs/nixpkgs",
+                    "nixPkgsRev": "release-23.11",
+                    "nixpkgs": ["php82", "php82Extensions.pdo_mysql", "composer", "sqlite"]
                 }
             }
         }
